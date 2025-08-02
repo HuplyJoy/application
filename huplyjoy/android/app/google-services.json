@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "940824697310",
+    "project_id": "tourism-app-2f7c0",
+    "storage_bucket": "tourism-app-2f7c0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940824697310:android:f11e064f6d261a6062654f",
+        "android_client_info": {
+          "package_name": "com.example.jeddah_tourism"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940824697310-d40np738p0j6k85ke5it8p1n44dnbedi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jeddah_tourism",
+            "certificate_hash": "0594e3ef34fd31c4aa2f9bab5383fe5408f7ba57"
+          }
+        },
+        {
+          "client_id": "940824697310-dctq1cjbpqt100ht3vnmf6hquc6u72op.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi053MK2azc5GsKCfBgTtZvr_inZjTG_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940824697310-dctq1cjbpqt100ht3vnmf6hquc6u72op.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "940824697310-4rtsmoo2aiaknf0ogklm3bacnsft7i3k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.jeddahTourism"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
