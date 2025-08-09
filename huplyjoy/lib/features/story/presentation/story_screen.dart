@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:huplyjoi/features/challenges/presentation/challenge_screen.dart';
+import 'package:huplyjoi/features/challenge/presentation/challenge_screen.dart';
 
 class StoryScreen extends StatefulWidget {
   const StoryScreen({super.key});

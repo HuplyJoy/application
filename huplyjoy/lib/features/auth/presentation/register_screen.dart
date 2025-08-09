@@ -44,31 +44,51 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: loading
-          ? const Center(child: CircularProgressIndicator())
-          : Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("إنشاء حساب", style: TextStyle(fontSize: 24)),
-            const SizedBox(height: 20),
-            TextField(controller: emailCtrl, decoration: const InputDecoration(labelText: "البريد الإلكتروني")),
-            const SizedBox(height: 10),
-            TextField(controller: passCtrl, decoration: const InputDecoration(labelText: "كلمة المرور"), obscureText: true),
-            const SizedBox(height: 20),
-            ElevatedButton(onPressed: register, child: const Text("إنشاء حساب ")),
-            TextButton(
-              onPressed: () => context.go('/login'),
-              child: const Text("تسجيل دخول"),
-            ),
-            const SizedBox(height: 10),
-            IconButton.filled(
-              onPressed: googleRegister,
-              icon: const Icon(Icons.g_mobiledata, size: 30,),
-            ),
-          ],
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/splash_cover/cover.jpg"),
+            fit: BoxFit.cover,
+          ),
         ),
+        child:
+            loading
+                ? const Center(child: CircularProgressIndicator())
+                : Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("إنشاء حساب", style: TextStyle(fontSize: 24)),
+                    const SizedBox(height: 20),
+                    TextField(
+                      controller: emailCtrl,
+                      decoration: const InputDecoration(
+                        labelText: "البريد الإلكتروني",
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    TextField(
+                      controller: passCtrl,
+                      decoration: const InputDecoration(
+                        labelText: "كلمة المرور",
+                      ),
+                      obscureText: true,
+                    ),
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: register,
+                      child: const Text("إنشاء حساب "),
+                    ),
+                    TextButton(
+                      onPressed: () => context.go('/login'),
+                      child: const Text("تسجيل دخول"),
+                    ),
+                    const SizedBox(height: 10),
+                    IconButton.filled(
+                      onPressed: googleRegister,
+                      icon: const Icon(Icons.g_mobiledata, size: 30),
+                    ),
+                  ],
+                ),
       ),
     );
   }

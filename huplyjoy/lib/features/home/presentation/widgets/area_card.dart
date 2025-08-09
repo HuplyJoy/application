@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:huplyjoi/features/challenges/presentation/challenge_screen.dart';
+import 'package:huplyjoi/features/challenge/presentation/challenge_screen.dart';
 import 'package:huplyjoi/features/home/model/landmark.dart';
 import 'package:huplyjoi/features/story/presentation/story_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';

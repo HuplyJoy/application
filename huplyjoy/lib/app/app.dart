@@ -15,13 +15,13 @@ class TourismApp extends StatelessWidget {
       title: 'Tourism Gamification App',
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
-      themeMode: ThemeMode.system, // سيتم التحكم بها من الإعدادات لاحقًا
+      themeMode: ThemeMode.system,
       routerConfig: AppRouter.router,
       supportedLocales: const [
         Locale('ar'),
         Locale('en'),
       ],
-      locale: const Locale('ar'), // يمكن تغييره لاحقًا حسب تفضيل المستخدم
+      locale: const Locale('ar'),
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
