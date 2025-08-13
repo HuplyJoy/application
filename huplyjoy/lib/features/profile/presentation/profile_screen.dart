@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:huplyjoi/app/theme/theme_provider.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends ConsumerStatefulWidget {
   const ProfileScreen({super.key});
+
+  @override
+  ConsumerState<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends ConsumerState<ProfileScreen> {
+  final user = FirebaseAuth.instance.currentUser;
+  final points = '1200';
 
   void _signOut(BuildContext context) async {
     try {
@@ -60,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                 try {
                   await user.updateDisplayName(nameCtrl.text);
                   // if (emailCtrl.text != user.email && emailCtrl.text.isNotEmpty) {
-                  //   await updateEmail(user, emailCtrl.text);
+                  //   await  FirebaseAuth.instance.currentUser.up(user, emailCtrl.text);
                   // }
                   await user.reload();
                   Navigator.pop(context);
@@ -82,10 +92,15 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
+  void _changTheme(value) {
+    setState(() {
+      ref.read(themeModeProvider.notifier).changThemeMode(value);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser;
-    final points = '1200';
+    final isDark = ref.watch(themeModeProvider) == ThemeMode.dark;
 
     return Scaffold(
       appBar: AppBar(
@@ -130,12 +145,16 @@ class ProfileScreen extends StatelessWidget {
               // تنفيذ لاحق
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.dark_mode),
-            title: const Text('تبديل الوضع الليلي'),
-            onTap: () {
-              // تنفيذ لاحق
-            },
+          SwitchListTile(
+            value: isDark,
+            title: Row(
+              children: [
+                Icon(isDark?Icons.dark_mode:Icons.sunny),
+                const SizedBox(width: 16,),
+                Text(isDark?'الوضع الليلي':'الوضع النهاري'),
+              ],
+            ),
+            onChanged: _changTheme,
           ),
           const Divider(),
           ListTile(

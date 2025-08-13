@@ -6,6 +6,7 @@ import 'package:huplyjoi/features/goal/presentation/q_r_scaneer_screen.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class GoalScreen extends StatefulWidget {
   const GoalScreen(this.pageTitle, this.id, {super.key});
@@ -20,7 +21,6 @@ class _GoalScreenState extends State<GoalScreen> {
   LatLng? userLocation;
   final String mapTilerApiKey = 'vVYPEaYcAfGCzAvjCnKk';
   final MapController _mapController = MapController();
-
   List<Goal> goals_list = [];
 
   @override

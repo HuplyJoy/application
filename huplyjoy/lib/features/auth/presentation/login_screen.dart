@@ -96,9 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24),
-                      color: Theme.of(
-                        context,
-                      ).colorScheme.onSurface.withOpacity(0.9),
+                      color: Colors.black87,
                     ),
                     child: Form(
                       key: _formKey,
@@ -152,6 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             TextFormField(
                               controller: _pass,
                               style: TextStyle(color: Colors.white),
+                              obscureText: true,
                               decoration: InputDecoration(
                                 hintText: "كلمة المرور",
                                 border: OutlineInputBorder(
@@ -167,6 +166,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             if (!_isLogin) TextFormField(
                                 controller: _repass,
                                 style: TextStyle(color: Colors.white),
+                                obscureText: true,
                                 decoration: InputDecoration(
                                   hintText: "اعادة كلمة المرور",
                                   border: OutlineInputBorder(
@@ -195,7 +195,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: Text(
                                 _isLogin ? "إنشاء حساب" : "تسجيل دخول",
                                 style: Theme.of(context).textTheme.bodySmall!
-                                    .copyWith(color: Colors.white70),
+                                    .copyWith(color: Colors.white),
                               ),
                             ),
                             SizedBox(height: 12),

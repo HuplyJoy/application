@@ -26,7 +26,7 @@ class ChallengeCard extends StatelessWidget {
             challenge.description,
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 13, color: Colors.green.shade100),
+            style: TextStyle(fontSize: 13, color: Theme.of(context).colorScheme.onSurface.withAlpha(150)),
           ),
         ),
         trailing: Column(

@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.jeddah_tourism"
+    namespace = "com.example.hublyjoy"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 

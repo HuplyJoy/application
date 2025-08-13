@@ -57,7 +57,7 @@ dependencies:
 
   # Theme Switching
   shared_preferences: ^2.5.3
-  #  provider: ^6.1.5
+  flutter_riverpod: ^2.6.1
 
 
   # Animations + SVG

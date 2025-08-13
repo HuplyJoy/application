@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '940824697310',
     projectId: 'tourism-app-2f7c0',
     storageBucket: 'tourism-app-2f7c0.firebasestorage.app',
+    androidClientId: '940824697310-d40np738p0j6k85ke5it8p1n44dnbedi.apps.googleusercontent.com',
     iosClientId: '940824697310-4rtsmoo2aiaknf0ogklm3bacnsft7i3k.apps.googleusercontent.com',
     iosBundleId: 'com.example.jeddahTourism',
   );

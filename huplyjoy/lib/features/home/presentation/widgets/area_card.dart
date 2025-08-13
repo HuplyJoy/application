@@ -83,7 +83,7 @@ class _AreaCardState extends State<AreaCard> {
                     widget.area.description,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withAlpha(150)),
                   ),
                   const SizedBox(height: 6),
                   Row(

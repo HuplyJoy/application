@@ -1,4 +1,4 @@
-package com.example.jeddah_tourism
+package com.example.hublyjoy
 
 import io.flutter.embedding.android.FlutterActivity
 
